@@ -17,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/techtrackicon"
+        tools:srcCompat="@drawable/techtrackicon" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -32,8 +33,107 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16sp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/log_in"
+                android:textSize="44sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16sp"
+                android:text="@string/email"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:autofillHints="emailAddress"
+                android:hint="@string/enter_your_email_here"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="15dp"
+                android:textColorHint="#757575" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/password"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:autofillHints="password"
+                android:hint="@string/enter_your_password"
+                android:inputType="numberPassword"
+                android:minHeight="48dp"
+                android:paddingTop="15dp"
+                android:textColorHint="#757575" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16sp"
+                android:text="@string/forgot_password"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="#484848"
+                android:text="@string/login"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="VisualLintButtonSize" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16sp"
+                android:text="@string/do_not_hava_an_account"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/createaccount_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="#484848"
+                android:text="@string/sign_up"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="VisualLintButtonSize" />
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
