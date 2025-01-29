@@ -6,14 +6,11 @@
             <corners android:radius="8dp" /> <!-- Corner radius to match CardView -->
         </shape>
     </item>
-    <item android:right="2dp"
-        android:left="2dp"
-        android:bottom="2dp"
-        android:top="2dp">
+    <item>
         <shape android:shape="rectangle">
-            <solid android:color="@android:color/transparent" /> <!-- Transparent background -->
+            <solid android:color="?attr/backgroundColor" /> <!-- Transparent background -->
             <stroke
-                android:width="2dp"
+                android:width="4dp"
                 android:color="?attr/colorPrimary" /> <!-- Outline color -->
             <corners android:radius="8dp" /> <!-- Corner radius to match CardView -->
         </shape>

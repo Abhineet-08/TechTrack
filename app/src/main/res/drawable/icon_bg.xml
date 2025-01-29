@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="?attr/colorPrimary"/> <!-- Outline color -->
+            <size android:width="102dp" android:height="102dp"/> <!-- Size of the outline -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent"/> <!-- Transparent fill -->
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/techtrackicon"
+        android:gravity="center" />
+    </item>
+</layer-list>
