@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+        <!-- Light Theme Colors -->
+        <color name="black">#000000</color> <!-- Black -->
+        <color name="white">#FFFFFF</color> <!-- White -->
+        <color name="my_light_primary">#6200EE</color> <!-- Purple -->
+        <color name="my_light_primary_dark">#3700B3</color> <!-- Dark Purple -->
+        <color name="my_light_background">#F5F5F5</color> <!-- Light Gray -->
+        <color name="my_light_surface">#FFFFFF</color> <!-- White Surface -->
+        <color name="my_light_on_primary">#FFFFFF</color> <!-- Text on Primary -->
+        <color name="my_light_on_background">#212121</color> <!-- Dark Gray Text on Background -->
+        <color name="my_light_on_surface">#212121</color> <!-- Dark Gray Text on Surface -->
+
+        <!-- Dark Theme Colors -->
+        <color name="my_dark_primary">#BB86FC</color> <!-- Light Purple -->
+        <color name="my_dark_primary_dark">#3700B3</color> <!-- Dark Purple -->
+        <color name="my_dark_background">#222222</color> <!-- Dark Gray -->
+        <color name="my_dark_surface">#1E1E1E</color> <!-- Dark Surface -->
+        <color name="my_dark_on_primary">#000000</color> <!-- Black Text on Primary -->
+        <color name="my_dark_on_background">#6200EE</color>
+        <color name="forText">#ffffff</color><!-- Light Gray Text on Background -->
+        <color name="my_dark_on_surface">#E0E0E0</color> <!-- Light Gray Text on Surface -->
 </resources>

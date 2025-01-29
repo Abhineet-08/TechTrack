@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">TechTrack</string>
+    <string name="loading">Loading.....</string>
+    <string name="e_comm">E Comm</string>
+    <string name="log_in">Log-in</string>
+    <string name="email">Email</string>
+    <string name="enter_your_email_here">Enter your Email here</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">LogIn</string>
+    <string name="do_not_hava_an_account">Do not hava an account ?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or_login_with">Or Login with</string>
+    <string name="loginwithemail">LoginWithEmail</string>
+    <string name="sign_up_b">Sign-up</string>
+    <string name="name">Name</string>
+    <string name="your_name">Your Name</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="your_contact_number">Your Contact Number</string>
+    <string name="already_have_an_account">Already Have an Account?</string>
+    <string name="logout">Logout</string>
 </resources>

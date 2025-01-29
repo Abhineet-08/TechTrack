@@ -13,19 +13,13 @@
         android:theme="@style/Theme.TechTrack"
         tools:targetApi="31">
         <activity
-            android:name=".data.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SignUpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SignUpActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.SignUpActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
