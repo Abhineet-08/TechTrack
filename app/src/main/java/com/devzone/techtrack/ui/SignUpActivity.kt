@@ -66,7 +66,8 @@ class SignUpActivity : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(mail, pass).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     // Account creation successful
-                    val userId = auth.currentUser?.uid
+                    val user = auth.currentUser
+                    val userId = user?.uid
                     val databaseRef = FirebaseDatabase.getInstance().getReference("Users")
 
                     // User data to store in Realtime Database
@@ -81,12 +82,19 @@ class SignUpActivity : AppCompatActivity() {
                     userId?.let {
                         databaseRef.child(it).setValue(userData).addOnCompleteListener { dbTask ->
                             if (dbTask.isSuccessful) {
-                                Toast.makeText(this, "Signup successful and data saved!", Toast.LENGTH_SHORT).show()
+                                // Send email verification
+                                user.sendEmailVerification().addOnCompleteListener { emailTask ->
+                                    if (emailTask.isSuccessful) {
+                                        Toast.makeText(this, "Signup successful! Verification email sent.", Toast.LENGTH_SHORT).show()
 
-                                // Navigate to the login screen
-                                val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
-                                startActivity(intent)
-                                finish()
+                                        // Navigate to the login screen
+                                        val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
+                                        startActivity(intent)
+                                        finish()
+                                    } else {
+                                        Toast.makeText(this, "Failed to send verification email: ${emailTask.exception?.message}", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             } else {
                                 Toast.makeText(this, "Failed to save user data: ${dbTask.exception?.message}", Toast.LENGTH_SHORT).show()
                             }

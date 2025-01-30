@@ -20,4 +20,6 @@
     <string name="your_contact_number">Your Contact Number</string>
     <string name="already_have_an_account">Already Have an Account?</string>
     <string name="logout">Logout</string>
+    <string name="send_mail">Send Mail</string>
+    <string name="reset_password">Reset Password</string>
 </resources>
