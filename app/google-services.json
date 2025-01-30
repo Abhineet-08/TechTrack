@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "28118427482",
+    "project_id": "techtrack-43259",
+    "storage_bucket": "techtrack-43259.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28118427482:android:cef66a900a59a47bda3563",
+        "android_client_info": {
+          "package_name": "com.devzone.techtrack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCReRw24cysuPdqAMKmU7RVv0Yt_lO8Zc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
