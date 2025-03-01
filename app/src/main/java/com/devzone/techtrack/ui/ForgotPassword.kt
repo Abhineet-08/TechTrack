@@ -5,8 +5,11 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.devzone.techtrack.databinding.ActivityForgotPasswordBinding
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 
 class ForgotPassword : AppCompatActivity() {
     private lateinit var binding: ActivityForgotPasswordBinding
@@ -16,31 +19,36 @@ class ForgotPassword : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityForgotPasswordBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
-        // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
 
         binding.resetPass.setOnClickListener {
-            val mail = binding.emailEt.text.toString().trim()
+            val email = binding.emailEt.text.toString().trim()
 
-            if (mail.isEmpty()) {
+            if (email.isEmpty()) {
                 binding.emailEt.error = "Email is required"
                 return@setOnClickListener
             }
 
-            // Send password reset email
-            auth.sendPasswordResetEmail(mail).addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(this, "Password reset email sent!", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@ForgotPassword, LoginActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    val errorMessage = task.exception?.message ?: "Failed to send reset email. Please try again."
-                    Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
-                }
+            lifecycleScope.launch {
+                sendResetEmail(email)
+            }
+        }
+    }
+
+    private suspend fun sendResetEmail(email: String) {
+        try {
+            auth.sendPasswordResetEmail(email).await()
+            Toast.makeText(this, "Password reset email sent!", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        } catch (e: Exception) {
+            val errorMessage = e.localizedMessage ?: "Failed to send reset email."
+            if (errorMessage.contains("There is no user record corresponding to this identifier")) {
+                Toast.makeText(this, "Email is not registered!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Error: $errorMessage", Toast.LENGTH_SHORT).show()
             }
         }
     }
