@@ -30,4 +30,8 @@
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="setting">Setting</string>
+    <string name="courses">Courses</string>
+    <string name="dbms_os">DBMS,OS,..</string>
+    <string name="notes">Notes</string>
+    <string name="view">View</string>
 </resources>
