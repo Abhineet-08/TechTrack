@@ -10,6 +10,11 @@ import com.devzone.techtrack.databinding.FragmentHomeBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import android.content.Intent
+import com.devzone.techtrack.CoursesActivity
+
+
+
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -35,6 +40,12 @@ class HomeFragment : Fragment() {
 
         // Fetch username
         fetchUserName()
+
+        binding.coursesBox.setOnClickListener {
+            val intent = Intent(requireContext(), CoursesActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun fetchUserName() {
@@ -59,4 +70,5 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

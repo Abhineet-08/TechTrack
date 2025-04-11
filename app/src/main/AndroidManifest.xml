@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TechTrack"
         tools:targetApi="31">
         <activity
+            android:name=".CoursesActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ForgotPassword"
             android:exported="false" />
         <activity
@@ -34,7 +37,6 @@
             android:name=".ui.SignUpActivity"
             android:exported="false" />
         <activity android:name=".ui.WelcomeActivity" />
-
     </application>
 
 </manifest>
