@@ -1,20 +1,23 @@
 package com.devzone.techtrack
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.devzone.techtrack.databinding.ActivityCoursesBinding
+import com.devzone.techtrack.ui.OSActivity
 
 class CoursesActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityCoursesBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_courses)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.coursesTitle)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityCoursesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // OS course click
+        binding.courseOS.setOnClickListener {
+            startActivity(Intent(this, OSActivity::class.java))
         }
     }
 }

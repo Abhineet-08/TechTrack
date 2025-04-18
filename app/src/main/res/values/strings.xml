@@ -34,4 +34,5 @@
     <string name="dbms_os">DBMS,OS,..</string>
     <string name="notes">Notes</string>
     <string name="view">View</string>
+    <string name="operating_system_os">Operating System (OS)</string>
 </resources>
