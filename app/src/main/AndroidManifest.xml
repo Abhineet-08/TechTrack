@@ -36,6 +36,8 @@
         <activity
             android:name=".ui.SignUpActivity"
             android:exported="false" />
+        <activity android:name=".ui.OSActivity" />
+
     </application>
 
 </manifest>
