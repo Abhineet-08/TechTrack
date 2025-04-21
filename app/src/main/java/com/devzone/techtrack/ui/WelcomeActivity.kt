@@ -15,7 +15,7 @@ class WelcomeActivity : AppCompatActivity() {
         val letsStartButton = findViewById<Button>(R.id.letsStartBtn)
 
         letsStartButton.setOnClickListener {
-            val intent = Intent(this, HomeScreen::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish() // so that user cannot come back to welcome screen
         }

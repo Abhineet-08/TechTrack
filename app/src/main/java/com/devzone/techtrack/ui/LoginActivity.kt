@@ -61,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
 
                         // Navigate to another screen (e.g., Home Screen)
-                        val intent = Intent(this@LoginActivity, WelcomeActivity::class.java)
+                        val intent = Intent(this@LoginActivity, HomeScreen::class.java)
                         startActivity(intent)
                         finish()
                     } else {

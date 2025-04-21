@@ -16,6 +16,7 @@ class HomeScreen : AppCompatActivity() {
     private lateinit var binding: ActivityHomeScreenBinding
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
+    private var selectedTabId = R.id.nav_profile
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +28,21 @@ class HomeScreen : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().getReference("Users")
 
-        // Fetch and store username
         bottomNavFunctions()
+
+        // Restore selected tab if this is a configuration change
+        if (savedInstanceState != null) {
+            selectedTabId = savedInstanceState.getInt("SELECTED_TAB", R.id.nav_profile)
+            binding.bottomNavigation.selectedItemId = selectedTabId
+        } else {
+            binding.bottomNavigation.selectedItemId = R.id.nav_profile
+            replaceFragment(ProfileFragment())
+        }
     }
-
-
 
     private fun bottomNavFunctions() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
+            selectedTabId = item.itemId
             when (item.itemId) {
                 R.id.nav_home -> {
                     // Load HomeFragment
@@ -59,4 +67,9 @@ class HomeScreen : AppCompatActivity() {
             .commit()
     }
 
+    // Save the selected tab on configuration change
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("SELECTED_TAB", selectedTabId)
+    }
 }

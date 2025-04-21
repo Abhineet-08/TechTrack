@@ -52,17 +52,21 @@ class HomeFragment : Fragment() {
         val userId = auth.currentUser?.uid
         if (userId != null) {
             database.child(userId).child("name").get().addOnSuccessListener { snapshot ->
-                if (snapshot.exists()) {
+                if (isAdded && _binding != null && snapshot.exists()) {
                     val userName = snapshot.value.toString()
                     binding.userNameTV.text = "Hi, $userName"
-                } else {
+                } else if (!snapshot.exists()) {
                     Toast.makeText(requireContext(), "User name not found", Toast.LENGTH_SHORT).show()
                 }
             }.addOnFailureListener {
-                Toast.makeText(requireContext(), "Failed to retrieve user name", Toast.LENGTH_SHORT).show()
+                if (isAdded && _binding != null) {
+                    Toast.makeText(requireContext(), "Failed to retrieve user name", Toast.LENGTH_SHORT).show()
+                }
             }
         } else {
-            Toast.makeText(requireContext(), "User not logged in", Toast.LENGTH_SHORT).show()
+            if (isAdded && _binding != null) {
+                Toast.makeText(requireContext(), "User not logged in", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
