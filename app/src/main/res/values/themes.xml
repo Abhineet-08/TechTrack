@@ -17,9 +17,11 @@
         <item name="colorSurface">@color/my_light_surface</item>
 
         <!-- Text colors -->
-        <item name="android:textColor">@color/my_light_on_background</item>
         <item name="colorOnBackground">@color/my_light_on_background</item>
         <item name="colorOnSurface">@color/my_light_on_surface</item>
+
+        <!-- Background -->
+        <item name="background">@drawable/gradient_day</item>
     </style>
 
 

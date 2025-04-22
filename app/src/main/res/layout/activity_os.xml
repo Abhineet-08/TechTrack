@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F8F1FF">
+
+    <!-- Heading -->
+    <ImageView
+        android:id="@+id/myImage"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:src="@drawable/os_inro"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="My Image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/osHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Operating Systems"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/my_light_primary"
+        app:layout_constraintTop_toBottomOf="@id/myImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/osTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn OS the smart way!"
+        android:textSize="16sp"
+        android:textColor="@color/my_light_primary"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/osHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <!-- Animated Lectures Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/boxLectures"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp"
+        android:background="@drawable/box_border_home"
+        app:layout_constraintTop_toBottomOf="@id/osTagline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <Button
+                android:id="@+id/btnWatchNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Watch Now"
+                android:textAllCaps="false"
+                android:backgroundTint="#7D5BA6"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/techtrack_video_icon"
+                    android:contentDescription="Lecture Icon"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Animated Lectures"
+                    android:textColor="@color/my_light_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Watch high-quality videos"
+                    android:textSize="12sp"
+                    android:textColor="#757575"
+                    android:layout_marginTop="2dp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Roadmap Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/boxRoadmap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp"
+        android:background="@drawable/box_border_home"
+        app:layout_constraintTop_toBottomOf="@id/boxLectures"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <Button
+                android:id="@+id/btnViewRoadmap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Roadmap"
+                android:textAllCaps="false"
+                android:backgroundTint="#7D5BA6"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/tech_road_icon"
+                    android:contentDescription="Roadmap Icon"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roadmap for OS"
+                    android:textColor="@color/my_light_primary"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step-by-step OS learning"
+                    android:textSize="12sp"
+                    android:textColor="#757575"
+                    android:layout_marginTop="2dp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Resources Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/boxResources"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp"
+        android:background="@drawable/box_border_home"
+        app:layout_constraintTop_toBottomOf="@id/boxRoadmap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <Button
+                android:id="@+id/btnExploreResources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore Resources"
+                android:textAllCaps="false"
+                android:backgroundTint="#7D5BA6"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/tech_track_res_icon"
+                    android:contentDescription="Resources Icon"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other Resources"
+                    android:textColor="@color/my_light_primary"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notes, quizzes, PDFs"
+                    android:textSize="12sp"
+                    android:textColor="#757575"
+                    android:layout_marginTop="2dp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/osFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start small, dream big – OS is just the beginning!"
+        android:textColor="@color/my_light_primary"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/boxResources"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

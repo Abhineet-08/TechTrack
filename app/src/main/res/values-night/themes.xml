@@ -17,9 +17,11 @@
         <item name="colorSurface">@color/my_dark_surface</item>
 
         <!-- Text colors -->
-        <item name="android:textColor">@color/my_dark_on_background</item>
         <item name="colorOnBackground">@color/forText</item>
         <item name="colorOnSurface">@color/my_dark_on_surface</item>
+
+        <!-- Background -->
+        <item name="background">@drawable/gradient_night</item>
     </style>
 
 </resources>

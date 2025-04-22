@@ -3,8 +3,8 @@ package com.devzone.techtrack
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.devzone.techtrack.courses.OsActivity
 import com.devzone.techtrack.databinding.ActivityCoursesBinding
-import com.devzone.techtrack.ui.OSActivity
 
 class CoursesActivity : AppCompatActivity() {
 
@@ -15,9 +15,9 @@ class CoursesActivity : AppCompatActivity() {
         binding = ActivityCoursesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // OS course click listener
+//         OS course click listener
         binding.courseOS.setOnClickListener {
-            startActivity(Intent(this, OSActivity::class.java))
+            startActivity(Intent(this, OsActivity::class.java))
         }
     }
 }
