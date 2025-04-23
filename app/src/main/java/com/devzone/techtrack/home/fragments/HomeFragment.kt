@@ -35,29 +35,29 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Initialize Firebase
-        auth = FirebaseAuth.getInstance()
+         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference.child("Users")
 
         // Fetch username
         fetchUserName()
-
         binding.coursesBox.setOnClickListener {
             val intent = Intent(requireContext(), CoursesActivity::class.java)
             startActivity(intent)
         }
+
 
     }
 
     private fun fetchUserName() {
         val userId = auth.currentUser?.uid
         if (userId != null) {
-            database.child(userId).child("name").get().addOnSuccessListener { snapshot ->
+           database.child(userId).child("name").get().addOnSuccessListener { snapshot ->
                 if (isAdded && _binding != null && snapshot.exists()) {
-                    val userName = snapshot.value.toString()
+                   val userName = snapshot.value.toString()
                     binding.userNameTV.text = "Hi, $userName"
                 } else if (!snapshot.exists()) {
                     Toast.makeText(requireContext(), "User name not found", Toast.LENGTH_SHORT).show()
-                }
+               }
             }.addOnFailureListener {
                 if (isAdded && _binding != null) {
                     Toast.makeText(requireContext(), "Failed to retrieve user name", Toast.LENGTH_SHORT).show()

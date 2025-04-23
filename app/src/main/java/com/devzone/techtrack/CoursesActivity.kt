@@ -1,23 +1,28 @@
 package com.devzone.techtrack
+import androidx.cardview.widget.CardView
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.devzone.techtrack.courses.OsActivity
 import com.devzone.techtrack.databinding.ActivityCoursesBinding
 
 class CoursesActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCoursesBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCoursesBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_courses) // Ensure this is the correct layout file
 
-//         OS course click listener
-        binding.courseOS.setOnClickListener {
-            startActivity(Intent(this, OsActivity::class.java))
+        // Correct reference of the CardView by ID
+        val courseOSCard = findViewById<CardView>(R.id.courseOS)
+
+        // Set the click listener after the view is initialized
+        courseOSCard.setOnClickListener {
+            val intent = Intent(this, OsActivity::class.java)
+            startActivity(intent)
         }
     }
 }
+
+

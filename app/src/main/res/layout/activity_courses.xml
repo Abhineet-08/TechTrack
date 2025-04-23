@@ -1,176 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F1FF"
     android:padding="16dp">
 
-    <!-- Heading -->
-    <TextView
-        android:id="@+id/coursesTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Courses"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/my_light_primary"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- OS Box -->
     <LinearLayout
-        android:id="@+id/courseOS"
-        android:layout_width="0dp"
+        android:id="@+id/CoursesActivity"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/box_border_home"
-        android:padding="16dp"
-        android:orientation="horizontal"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/coursesTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/techtrack_roadmap"
-            android:contentDescription="OS" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Heading Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:text="Operating System"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/my_light_primary"/>
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp"
+            android:layout_marginBottom="8dp"
+            tools:ignore="UseCompoundDrawables">
 
-    <!-- DBMS Box -->
-    <LinearLayout
-        android:id="@+id/courseDBMS"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/box_border_home"
-        android:padding="16dp"
-        android:orientation="horizontal"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/courseOS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Courses"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#7D5BA6"
+                tools:ignore="HardcodedText"/>
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/techtrack_roadmap"
-            android:contentDescription="DBMS" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Search"
+                android:src="@drawable/search"
+                tools:ignore="HardcodedText,ImageContrastCheck" />
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- OS Course Full Width -->
+        <include
+            android:id="@+id/includeCourseOS"
+            layout="@layout/item_course_os_full" />
+
+
+        <!-- Grid Row: DBMS + Web Dev -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:text="DBMS"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/my_light_primary"/>
-    </LinearLayout>
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
 
-    <!-- Web Dev Box -->
-    <LinearLayout
-        android:id="@+id/courseWeb"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/box_border_home"
-        android:padding="16dp"
-        android:orientation="horizontal"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/courseDBMS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp">
+            <include
+                layout="@layout/item_course_card_dbms"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                tools:ignore="IncludeLayoutParam" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/techtrack_roadmap"
-            android:contentDescription="Web Dev" />
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:layout_width="wrap_content"
+            <include
+                layout="@layout/item_course_card_web"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                tools:ignore="IncludeLayoutParam" />
+        </LinearLayout>
+        <!-- Grid Row: Android + DSA -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:text="Web Development"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/my_light_primary"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <include layout="@layout/item_course_card_android"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                tools:ignore="IncludeLayoutParam" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"/>
+
+            <include layout="@layout/item_course_card_dsa"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                tools:ignore="IncludeLayoutParam" />
+        </LinearLayout>
+
     </LinearLayout>
-
-    <!-- Android Dev Box -->
-    <LinearLayout
-        android:id="@+id/courseAndroid"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/box_border_home"
-        android:padding="16dp"
-        android:orientation="horizontal"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/courseWeb"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/techtrack_roadmap"
-            android:contentDescription="Android Dev" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:text="Android Development"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/my_light_primary"/>
-    </LinearLayout>
-
-    <!-- DSA Box -->
-    <LinearLayout
-        android:id="@+id/courseDSA"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/box_border_home"
-        android:padding="16dp"
-        android:orientation="horizontal"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/courseAndroid"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/techtrack_roadmap"
-            android:contentDescription="DSA" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:text="DSA"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/my_light_primary"/>
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

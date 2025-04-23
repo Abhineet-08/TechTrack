@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:layout_weight="1"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/box_border_home">
+
+        <ImageView
+            android:id="@+id/androidIcon"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/android_img"
+            android:contentDescription="Android Icon"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/androidTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Development"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/my_light_primary"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/androidSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apps with Kotlin  and Jetpack"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:layout_gravity="center_horizontal"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnStartAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/my_light_primary"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

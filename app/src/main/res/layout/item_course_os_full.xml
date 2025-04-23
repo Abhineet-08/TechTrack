@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/courseOS"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@drawable/box_border_home">
+
+        <!-- Left Side Icon -->
+
+        <!-- Course Title -->
+
+        <ImageView
+            android:id="@+id/osCourseIcon"
+            android:layout_width="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true"
+            android:contentDescription="OS Icon"
+            android:scaleType="centerCrop"
+            android:src="@drawable/os_img"
+            tools:ignore="HardcodedText" />
+
+        <!-- Subtitle -->
+
+        <!-- Button Top-Right -->
+
+        <TextView
+            android:id="@+id/osCourseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/osCourseIcon"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="-29dp"
+            android:layout_below="@id/osCourseIcon"
+            android:text="Operating Systems"
+            android:textColor="@color/my_light_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/osCourseSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/osCourseTitle"
+            android:layout_alignStart="@id/osCourseTitle"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="40dp"
+            android:text="Learn OS the smart way!"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnStartOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/osCourseIcon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="29dp"
+            android:backgroundTint="@color/my_light_primary"
+            android:text="Start"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
