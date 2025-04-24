@@ -42,8 +42,9 @@
 
         <!-- OS Course Full Width -->
         <include
+            layout="@layout/item_course_os_full"
             android:id="@+id/includeCourseOS"
-            layout="@layout/item_course_os_full" />
+             />
 
 
         <!-- Grid Row: DBMS + Web Dev -->

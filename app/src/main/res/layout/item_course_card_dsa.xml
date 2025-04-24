@@ -31,7 +31,7 @@
             android:id="@+id/dsaTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Data Structures And algorithms"
+            android:text="Data Structure"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/my_light_primary"
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Master DSA logic and coding"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textColor="#757575"
             android:layout_gravity="center_horizontal"
             tools:ignore="HardcodedText"/>

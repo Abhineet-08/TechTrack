@@ -1,20 +1,17 @@
 package com.devzone.techtrack.home.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.devzone.techtrack.CoursesActivity
 import com.devzone.techtrack.databinding.FragmentHomeBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import android.content.Intent
-import com.devzone.techtrack.CoursesActivity
-
-
-
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -35,29 +32,29 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Initialize Firebase
-         auth = FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference.child("Users")
 
-        // Fetch username
+        // Fetch and set username
         fetchUserName()
+
+        // Handle click on courses box
         binding.coursesBox.setOnClickListener {
             val intent = Intent(requireContext(), CoursesActivity::class.java)
             startActivity(intent)
         }
-
-
     }
 
     private fun fetchUserName() {
         val userId = auth.currentUser?.uid
         if (userId != null) {
-           database.child(userId).child("name").get().addOnSuccessListener { snapshot ->
+            database.child(userId).child("name").get().addOnSuccessListener { snapshot ->
                 if (isAdded && _binding != null && snapshot.exists()) {
-                   val userName = snapshot.value.toString()
+                    val userName = snapshot.value.toString()
                     binding.userNameTV.text = "Hi, $userName"
                 } else if (!snapshot.exists()) {
                     Toast.makeText(requireContext(), "User name not found", Toast.LENGTH_SHORT).show()
-               }
+                }
             }.addOnFailureListener {
                 if (isAdded && _binding != null) {
                     Toast.makeText(requireContext(), "Failed to retrieve user name", Toast.LENGTH_SHORT).show()
@@ -74,5 +71,4 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }
