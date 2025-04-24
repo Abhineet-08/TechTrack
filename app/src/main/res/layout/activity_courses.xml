@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F1FF"
     android:padding="16dp">
+
+
 
     <LinearLayout
         android:id="@+id/CoursesActivity"
@@ -13,26 +16,38 @@
         android:orientation="vertical">
 
         <!-- Heading Row -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingBottom="12dp"
             android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
             tools:ignore="UseCompoundDrawables">
 
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_gravity="start"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/profile"
+                app:srcCompat="@drawable/arrow" />
+
             <TextView
+                android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Courses"
+                android:textColor="#7D5BA6"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:textColor="#7D5BA6"
-                tools:ignore="HardcodedText"/>
+                tools:ignore="HardcodedText" />
 
             <ImageView
+                android:id="@+id/searchBtn"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="Search"
@@ -42,9 +57,8 @@
 
         <!-- OS Course Full Width -->
         <include
-            layout="@layout/item_course_os_full"
             android:id="@+id/includeCourseOS"
-             />
+            layout="@layout/item_course_os_full" />
 
 
         <!-- Grid Row: DBMS + Web Dev -->
@@ -56,6 +70,7 @@
             android:orientation="horizontal">
 
             <include
+                android:id="@+id/includeCourseDBMS"
                 layout="@layout/item_course_card_dbms"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -66,6 +81,7 @@
                 android:layout_height="wrap_content" />
 
             <include
+                android:id="@+id/includeCourseWeb"
                 layout="@layout/item_course_card_web"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -75,19 +91,23 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
 
-            <include layout="@layout/item_course_card_android"
+            <include
+                android:id="@+id/includeCourseAndroid"
+                layout="@layout/item_course_card_android"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 tools:ignore="IncludeLayoutParam" />
 
             <Space
                 android:layout_width="12dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
-            <include layout="@layout/item_course_card_dsa"
+            <include
+                android:id="@+id/includeCourseDSA"
+                layout="@layout/item_course_card_dsa"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 tools:ignore="IncludeLayoutParam" />

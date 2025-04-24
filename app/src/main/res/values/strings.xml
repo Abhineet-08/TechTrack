@@ -35,4 +35,7 @@
     <string name="notes">Notes</string>
     <string name="view">View</string>
     <string name="operating_system_os">Operating System (OS)</string>
+    <string name="os">OS</string>
+    <string name="operating_system">Operating System</string>
+    <string name="dbms">DBMS</string>
 </resources>

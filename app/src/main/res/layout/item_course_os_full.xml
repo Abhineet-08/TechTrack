@@ -10,7 +10,7 @@
     app:cardCornerRadius="12dp"
     android:foreground="?attr/selectableItemBackground">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
@@ -23,13 +23,17 @@
         <ImageView
             android:id="@+id/osCourseIcon"
             android:layout_width="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
             android:layout_height="160dp"
             android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
             android:contentDescription="OS Icon"
             android:scaleType="centerCrop"
             android:src="@drawable/os_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText" />
 
         <!-- Subtitle -->
@@ -40,14 +44,16 @@
             android:id="@+id/osCourseTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/osCourseIcon"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="-29dp"
             android:layout_below="@id/osCourseIcon"
+            android:layout_alignBottom="@id/osCourseIcon"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
             android:text="Operating Systems"
             android:textColor="@color/my_light_primary"
             android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/osCourseIcon"
+            app:layout_constraintTop_toBottomOf="@+id/osCourseIcon"
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -56,11 +62,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/osCourseTitle"
             android:layout_alignStart="@id/osCourseTitle"
-            android:layout_marginStart="-1dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="5dp"
             android:text="Learn OS the smart way!"
             android:textColor="#757575"
             android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/osCourseTitle"
+            app:layout_constraintTop_toBottomOf="@+id/osCourseTitle"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -69,12 +76,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/osCourseIcon"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="29dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="11dp"
             android:backgroundTint="@color/my_light_primary"
             android:text="Start"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/osCourseSubtitle"
+            app:layout_constraintEnd_toEndOf="@+id/osCourseIcon"
+            app:layout_constraintStart_toEndOf="@+id/osCourseTitle"
+            app:layout_constraintTop_toTopOf="@+id/osCourseTitle"
             tools:ignore="HardcodedText" />
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

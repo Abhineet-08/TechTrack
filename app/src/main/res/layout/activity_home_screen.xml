@@ -21,8 +21,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginBottom="2dp"
-        app:background="@drawable/rounded_bottom_nav"
-        app:elevation="8dp"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
