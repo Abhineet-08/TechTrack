@@ -13,7 +13,16 @@
         android:theme="@style/Theme.TechTrack"
         tools:targetApi="31">
         <activity
-            android:name=".courses.OsActivity"
+            android:name=".courses.common.ResourcesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".courses.common.RoadMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".courses.common.LecturesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".courses.CommonActivity"
             android:exported="false" />
         <activity
             android:name=".CoursesActivity"

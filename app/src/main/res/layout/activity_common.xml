@@ -31,12 +31,14 @@
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/osHeading"
+        android:id="@+id/courseTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Operating Systems"
         android:textSize="28sp"
         android:textStyle="bold"
+        android:gravity="center"
+        android:textAlignment="center"
         android:textColor="@color/my_light_primary"
         app:layout_constraintTop_toBottomOf="@id/myImage"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,14 +47,14 @@
 
     <!-- Subtitle -->
     <TextView
-        android:id="@+id/osTagline"
+        android:id="@+id/courseTagline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Learn OS the smart way!"
         android:textSize="16sp"
         android:textColor="@color/my_light_primary"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/osHeading"
+        app:layout_constraintTop_toBottomOf="@id/courseTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText" />
@@ -66,7 +68,7 @@
         app:cardElevation="4dp"
         app:cardCornerRadius="12dp"
         android:background="@drawable/box_border_home"
-        app:layout_constraintTop_toBottomOf="@id/osTagline"
+        app:layout_constraintTop_toBottomOf="@id/courseTagline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -257,7 +259,7 @@
 
     <!-- Footer -->
     <TextView
-        android:id="@+id/osFooter"
+        android:id="@+id/courseFooter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start small, dream big – OS is just the beginning!"

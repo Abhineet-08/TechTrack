@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.devzone.techtrack.courses.OsActivity
+import com.devzone.techtrack.courses.CommonActivity
 import com.devzone.techtrack.databinding.ActivityCoursesBinding
 import com.devzone.techtrack.databinding.ItemCourseCardAndroidBinding
 import com.devzone.techtrack.databinding.ItemCourseCardDbmsBinding
@@ -27,8 +27,8 @@ class CoursesActivity : AppCompatActivity() {
         val osIncludedView = findViewById<View>(R.id.includeCourseOS)
         val osBinding = ItemCourseOsFullBinding.bind(osIncludedView)
         osBinding.btnStartOS.setOnClickListener {
-            val intent = Intent(this, OsActivity::class.java)
-            intent.putExtra("tabIndex", 1) // Use whatever tab index you need
+            val intent = Intent(this, CommonActivity::class.java)
+            intent.putExtra("courseName", "OS")
             startActivity(intent)
         }
 
@@ -37,8 +37,8 @@ class CoursesActivity : AppCompatActivity() {
         val dbmsIncludedView = findViewById<View>(R.id.includeCourseDBMS)
         val dbmsBinding = ItemCourseCardDbmsBinding.bind(dbmsIncludedView)
         dbmsBinding.btnStartDBMS.setOnClickListener {
-            val intent = Intent(this, OsActivity::class.java)
-            intent.putExtra("tabIndex", 2) // Navigate to the corresponding tab
+            val intent = Intent(this, CommonActivity::class.java)
+            intent.putExtra("courseName", "DBMS")
             startActivity(intent)
         }
 
@@ -46,8 +46,8 @@ class CoursesActivity : AppCompatActivity() {
         val webDevIncludedView = findViewById<View>(R.id.includeCourseWeb)
         val webDevBinding = ItemCourseCardWebBinding.bind(webDevIncludedView)
         webDevBinding.btnStartWebDev.setOnClickListener {
-            val intent = Intent(this, OsActivity::class.java)
-            intent.putExtra("tabIndex", 3) // Navigate to the Web Dev tab
+            val intent = Intent(this, CommonActivity::class.java)
+            intent.putExtra("courseName", "Web")
             startActivity(intent)
         }
 
@@ -55,8 +55,8 @@ class CoursesActivity : AppCompatActivity() {
         val androidIncludedView = findViewById<View>(R.id.includeCourseAndroid)
         val androidBinding = ItemCourseCardAndroidBinding.bind(androidIncludedView)
         androidBinding.btnStartAndroid.setOnClickListener {
-            val intent = Intent(this, OsActivity::class.java)
-            intent.putExtra("tabIndex", 4) // Navigate to the Android tab
+            val intent = Intent(this, CommonActivity::class.java)
+            intent.putExtra("courseName", "Android")
             startActivity(intent)
         }
 
@@ -64,8 +64,8 @@ class CoursesActivity : AppCompatActivity() {
         val dsaIncludedView = findViewById<View>(R.id.includeCourseDSA)
         val dsaBinding = ItemCourseCardDsaBinding.bind(dsaIncludedView)
         dsaBinding.btnStartDSA.setOnClickListener {
-            val intent = Intent(this, OsActivity::class.java)
-            intent.putExtra("tabIndex", 5) // Navigate to the DSA tab
+            val intent = Intent(this, CommonActivity::class.java)
+            intent.putExtra("courseName", "DSA")
             startActivity(intent)
         }
 

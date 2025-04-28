@@ -38,4 +38,22 @@
     <string name="os">OS</string>
     <string name="operating_system">Operating System</string>
     <string name="dbms">DBMS</string>
+    // course Title
+    <string name="course_os">Operating System</string>
+    <string name="course_dbms">Database Management System</string>
+    <string name="course_web">Web Development</string>
+    <string name="course_android">Android Development</string>
+    <string name="course_dsa">Data Structures and Algorithms</string>
+    // course Tagline
+    <string name="tag_os">Learn OS the smart way!</string>
+    <string name="tag_dbms">Learn DBMS the smart way!</string>
+    <string name="tag_web">Learn Web Development the smart way!</string>
+    <string name="tag_android">Learn Android Development the smart way!</string>
+    <string name="tag_dsa">Learn DSA the smart way!</string>
+    // course Footer
+    <string name="foot_os">Start small, dream big – OS is just the beginning!</string>
+    <string name="foot_dbms">Start small, dream big – DBMS is just the beginning!</string>
+    <string name="foot_web">Start small, dream big – Web Development is just the beginning!</string>
+    <string name="foot_android">Start small, dream big – Android Development is just the beginning!</string>
+    <string name="foot_dsa">Start small, dream big – DSA is just the beginning!</string>
 </resources>
