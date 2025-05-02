@@ -14,7 +14,7 @@
         <!-- Background and Surface colors -->
         <item name="android:windowBackground">@color/my_light_background</item>
         <item name="backgroundColor">@color/my_light_background</item>
-        <item name="colorSurface">@color/my_light_surface</item>
+        <item name="colorSurface">#F5F5F5</item>
 
         <!-- Text colors -->
         <item name="colorOnBackground">@color/my_light_on_background</item>

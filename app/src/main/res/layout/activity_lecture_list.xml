@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/background"
-    android:fitsSystemWindows="true"
-    tools:context=".courses.common.LecturesActivity">
+    tools:context=".courses.common.LectureListActivity">
+
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -42,9 +41,8 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sectionsRecyclerView"
+        android:id="@+id/lecturesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
@@ -55,10 +53,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,10 +8,12 @@
     tools:context=".courses.common.ResourcesActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="64dp"
-        android:layout_height="11dp"
-        android:text="Resorces"
+        android:id="@+id/resourcesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Resources go here"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
