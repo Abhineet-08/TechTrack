@@ -15,7 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="Hi, User"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
@@ -94,7 +94,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/card_bg"
         app:cardCornerRadius="16dp"
@@ -134,7 +134,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:contentDescription="@string/courses"
-                        android:src="@drawable/techtrack_course" />
+                        android:src="@drawable/course_icon" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -146,8 +146,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/courses"
-                            android:textSize="19sp"
-                            android:textStyle="bold" />
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorPrimary"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -199,7 +200,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:contentDescription="Roadmap"
-                        android:src="@drawable/techtrack_roadmap"
+                        android:src="@drawable/tech_road_icon"
                         tools:ignore="HardcodedText" />
 
                     <LinearLayout
@@ -214,6 +215,7 @@
                             android:text="Smart learning Roadmap"
                             android:textSize="17sp"
                             android:textStyle="bold"
+                            android:textColor="?attr/colorPrimary"
                             tools:ignore="HardcodedText,TextSizeCheck,VisualLintBounds" />
 
                         <TextView
@@ -254,7 +256,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:contentDescription="@string/notes"
-                        android:src="@drawable/techtrack_notes" />
+                        android:src="@drawable/tech_track_res_icon" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -268,6 +270,7 @@
                             android:text="@string/notes"
                             android:textSize="19sp"
                             android:textStyle="bold"
+                            android:textColor="?attr/colorPrimary"
                             tools:ignore="VisualLintBounds" />
 
                         <TextView
@@ -296,7 +299,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:contentDescription="animated video"
-                        android:src="@drawable/techtrack_video_icon"
+                        android:src="@drawable/animated_video_icon"
                         tools:ignore="HardcodedText" />
 
                     <LinearLayout
@@ -311,6 +314,7 @@
                             android:text="Animated videos"
                             android:textSize="16sp"
                             android:textStyle="bold"
+                            android:textColor="?attr/colorPrimary"
                             tools:ignore="HardcodedText" />
 
                         <TextView
