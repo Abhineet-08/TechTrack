@@ -51,6 +51,8 @@
         <activity
             android:name=".ui.SignUpActivity"
             android:exported="false" />
+        <activity android:name=".ui.RoadmapSubjectListActivity" />
+
     </application>
 
 </manifest>

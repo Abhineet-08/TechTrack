@@ -44,10 +44,11 @@
             android:id="@+id/androidSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HTML, CSS, JS and    more"
+            android:text="HTML, CSS, JS and more...."
             android:textSize="12sp"
             android:textColor="#757575"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -59,7 +60,7 @@
             android:textColor="#FFFFFF"
             android:backgroundTint="@color/my_light_primary"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             tools:ignore="HardcodedText" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

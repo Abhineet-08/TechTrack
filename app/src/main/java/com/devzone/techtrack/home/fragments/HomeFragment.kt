@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.devzone.techtrack.CoursesActivity
 import com.devzone.techtrack.databinding.FragmentHomeBinding
+import com.devzone.techtrack.ui.RoadmapSubjectListActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -43,6 +44,13 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), CoursesActivity::class.java)
             startActivity(intent)
         }
+        binding.RoadmapBox.setOnClickListener {
+            val intent = Intent(requireContext(), RoadmapSubjectListActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
     }
 
     private fun fetchUserName() {
